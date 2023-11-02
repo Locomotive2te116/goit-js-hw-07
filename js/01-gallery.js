@@ -42,7 +42,10 @@ galleryList.addEventListener("click", (event) => {
     baseLBox = document.querySelector(".basicLightbox");
       }
   document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
+       if (target.tagName !== "IMG") {
+          return;
+       }
+    if (event.key === "Escape") {
       baseLBox.classList.remove("basicLightbox");
     }
   });
